@@ -5,6 +5,7 @@
 #pdrop {
   top: 70px;
   position: absolute;
+  left: 10px;
   width: 300px;
   height: auto; }
   #pdrop /deep/ #scroller {
