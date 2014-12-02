@@ -1,0 +1,26 @@
+<polymer-element name="tagger-input" attributes='tags label'>
+  <template>
+    <link href="tagger-input.css" rel="stylesheet">
+
+    <paper-input id='input' on-tap='{{tapInput}}' 
+    on-keydown="{{keydownage}}" label='{{label}}' floatingLabel>
+    </paper-input>
+
+    <tagger-dropdown tags='{{tags}}'
+      on-new-value='{{onNewVal}}'
+      on-enter-pressed='{{onEnterPressed}}'
+      id='dropdown'>
+    </tagger-dropdown>
+
+    <div>
+      <template repeat='{{tag in selectedTags}}'>
+        <btn-group on-remove-tag='{{onRemoveTag}}'>
+          {{tag}}
+        </btn-group>
+      </template>
+    </div>
+
+  </template>
+
+  <script type="text/javascript" src='tagger-input.js'></script>
+</polymer-element>

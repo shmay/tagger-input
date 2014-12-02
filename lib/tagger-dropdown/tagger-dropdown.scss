@@ -1,0 +1,16 @@
+.sel {
+  background-color: rgb(97, 178, 243);
+  color: white;
+}
+
+#pdrop {
+  top: 70px;
+  position: absolute;
+  width: 300px;
+  height: auto;
+
+  /deep/ #scroller {
+    height: auto !important;
+    max-height: 100px;
+  }
+}

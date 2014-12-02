@@ -1,0 +1,14 @@
+<polymer-element name="tagger-dropdown" attributes='tags'>
+  <template>
+    <link href="tagger-dropdown.css" rel="stylesheet">
+
+    <paper-dropdown autoFocusDisabled id='pdrop'>
+      <template repeat='{{tag,i in shownTags}}'>
+        <paper-item class="{{i == sel ? 'sel' : ''}}">{{tag}}</paper-item>
+      </template>
+    </paper-dropdown>
+
+  </template>
+
+  <script type="text/javascript" src='tagger-dropdown.js'></script>
+</polymer-element>

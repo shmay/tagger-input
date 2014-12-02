@@ -1,0 +1,16 @@
+<polymer-element name="btn-group">
+  <template>
+    <link href="btn-group.css" rel="stylesheet">
+
+    <span id='content' class="btn btn-info">
+      <content></content>
+    </span>
+
+    <button type="button" class="btn btn-info icon" on-tap='{{tapIcon}}'>
+      <core-icon icon='clear'></core-icon>
+    </button>
+
+  </template>
+
+  <script type="text/javascript" src='btn-group.js'></script>
+</polymer-element>
