@@ -5,6 +5,7 @@
     <paper-input id='input' on-tap='{{tapInput}}' 
     on-keydown="{{keydownage}}" label='{{label}}' floatingLabel>
     </paper-input>
+    <div id='help-block'>input a tag and hit enter to select it</div>
 
     <tagger-dropdown tags='{{tags}}'
       on-new-value='{{onNewVal}}'
@@ -12,7 +13,7 @@
       id='dropdown'>
     </tagger-dropdown>
 
-    <div>
+    <div id='tags'>
       <template repeat='{{tag in selectedTags}}'>
         <btn-group on-remove-tag='{{onRemoveTag}}'>
           {{tag}}

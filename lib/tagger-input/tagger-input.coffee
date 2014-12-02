@@ -1,5 +1,6 @@
 Polymer 'tagger-input',
   selectedTags: []
+  tags: []
 
   ready: ->
     @$.dropdown.sendWidth @.offsetWidth
