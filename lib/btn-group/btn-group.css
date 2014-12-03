@@ -1,6 +1,7 @@
 :host {
   margin: 0;
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 5px; }
 
 .btn {
   position: relative;
