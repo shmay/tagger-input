@@ -5,11 +5,9 @@
     <local-click-detector></local-click-detector>
 
     <template repeat='{{tag,i in shownTags}}'>
-      <div>
-        <paper-item on-tap='{{tapItem}}' class="{{i == sel ? 'sel' : ''}}">
-          {{tag}}
-        </paper-item>
-      </div>
+      <paper-item on-tap='{{tapItem}}' class="{{i == sel ? 'sel' : ''}}">
+        {{tag}}
+      </paper-item>
     </template>
 
   </template>
