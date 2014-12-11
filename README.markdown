@@ -1,7 +1,13 @@
-A text field for inputting tags, built in [Polymer][1]. To use:
+An inline tag input field; inspired by StackOverflow's tag input; built in [Polymer][1]. To use:
 
 ```
-<tagger-input label='input some tags heah!'></tagger-input>
+<tagger-input label='input some tags naw...'></tagger-input>
+```
+
+You can bind/assign tags (those shown in dropdown) and selectedTags (those selected):
+
+```
+<tagger-input tags='{{tags}}' selectedTags='{{selectedTags}}'></tagger-input>
 ```
 
 Demo: [http://shmay.github.io/tagger-input/](http://shmay.github.io/tagger-input/)

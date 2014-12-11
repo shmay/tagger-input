@@ -2,11 +2,15 @@
   <template>
     <link href="tagger-dropdown.css" rel="stylesheet">
 
-    <paper-dropdown autoFocusDisabled id='pdrop'>
-      <template repeat='{{tag,i in shownTags}}'>
-        <paper-item class="{{i == sel ? 'sel' : ''}}">{{tag}}</paper-item>
-      </template>
-    </paper-dropdown>
+    <local-click-detector></local-click-detector>
+
+    <template repeat='{{tag,i in shownTags}}'>
+      <div>
+        <paper-item on-tap='{{tapItem}}' class="{{i == sel ? 'sel' : ''}}">
+          {{tag}}
+        </paper-item>
+      </div>
+    </template>
 
   </template>
 

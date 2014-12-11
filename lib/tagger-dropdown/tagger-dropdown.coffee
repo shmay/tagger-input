@@ -12,6 +12,11 @@ Polymer "tagger-dropdown",
 
     @fireValueChange()
 
+  tapItem: (e,d,s) ->
+    tag = s.textContent.trim()
+    @fire('enter-pressed', tag)
+    @reset()
+
   fireValueChange: -> 
     @fire('new-value', @shownValue)
 
@@ -69,15 +74,11 @@ Polymer "tagger-dropdown",
       @close()
 
   open: ->
-    console.log 'open'
-    @opened = true
-    @$.pdrop.open()
+    if !@opened
+      @opened = true
+      @style.display = 'block'
 
   close: ->
-    console.log 'close'
     if @opened
       @opened = false
-      @$.pdrop.close()
-
-  sendWidth: (width) ->
-    @style.width = "#{width}px"
+      @style.display = 'none'

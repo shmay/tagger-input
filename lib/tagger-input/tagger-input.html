@@ -2,24 +2,25 @@
   <template>
     <link href="tagger-input.css" rel="stylesheet">
 
-    <paper-input id='input' on-tap='{{tapInput}}' 
-    on-keydown="{{keydownage}}" label='{{label}}' floatingLabel>
-    </paper-input>
-    <div id='help-block'>input a tag and hit enter to select it</div>
+    <div id='box'>
+      <local-click-detector></local-click-detector>
+      <div id='btns'>
+        <template repeat='{{tag in selectedTags}}'>
+          <btn-group on-remove-tag='{{onRemoveTag}}'>
+            {{tag}}
+          </btn-group>
+        </template>
+      </div>
+      <input is='core-input' id='input' on-tap='{{tapInput}}' 
+      placeholder='{{label}}'
+      on-keydown="{{keydownage}}" />
+    </div>
 
     <tagger-dropdown tags='{{tags}}'
       on-new-value='{{onNewVal}}'
       on-enter-pressed='{{onEnterPressed}}'
       id='dropdown'>
     </tagger-dropdown>
-
-    <div id='tags'>
-      <template repeat='{{tag in selectedTags}}'>
-        <btn-group on-remove-tag='{{onRemoveTag}}'>
-          {{tag}}
-        </btn-group>
-      </template>
-    </div>
 
   </template>
 
